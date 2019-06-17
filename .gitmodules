@@ -1,3 +1,6 @@
 [submodule "SingleCycleSim/soft_riscv"]
 	path = SingleCycleSim/soft_riscv
 	url = https://github.com/AEW2015/soft_riscv.git
+[submodule "Taiga/Taiga"]
+	path = Taiga/Taiga
+	url = https://gitlab.com/AEW2015/Taiga.git
