@@ -4,3 +4,6 @@
 [submodule "Taiga/Taiga"]
 	path = Taiga/Taiga
 	url = https://gitlab.com/AEW2015/Taiga.git
+[submodule "PicoRV32/PicoRV32"]
+	path = PicoRV32/PicoRV32
+	url = https://github.com/cliffordwolf/picorv32.git
