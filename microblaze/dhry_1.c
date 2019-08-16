@@ -114,8 +114,8 @@ main ()
     printf ("\n");
   }
   {
-	  printf("Number_Of_Runs set to 300000");
-	  Number_Of_Runs = 300000;
+	  printf("Number_Of_Runs set to 1000000");
+	  Number_Of_Runs = 1000000;
   }
   printf ("\n");
 
@@ -286,6 +286,11 @@ main ()
     /* calculate and print dmips/mhz */
     float dmips = Dhrystones_Per_Second / 1757.0;
     float dmips_per_mhz = dmips / (freq/1000000.0);
+    int dm0 = (int) dmips_per_mhz*1;
+    int dm1 = (int) (dmips_per_mhz*10)%10;
+    int dm2 = (int) (dmips_per_mhz*100)%10;
+    int dm3 = (int) (dmips_per_mhz*1000)%10;
+
 
      /* we expect dmips_per_mhz = 0.92 for MicroBlaze, or less if fewer options are enabled
       * since we can't print out float's using xil_printf, print it out as an integer
@@ -293,7 +298,7 @@ main ()
       */
 
      printf("DMIPS          : %d\n", (int)dmips);
-     printf("DMIPS/Mhz      : .%d\n", (int)(100*dmips_per_mhz));
+     printf("DMIPS/Mhz      : %d.%d%d%D\n", dm0,dm1,dm2,dm3);
      printf("Proc Frequency : %d Hz\n",freq);
   }
 
